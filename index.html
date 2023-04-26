@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+<head>
+    <meta charset="UTF-8">
+    <title>practisepractise</title>   
+    <link rel="stylesheet" href="style.css"> 
+    
+   
+
+
+    
+
+</head>
+<body>
+   
+  <script>
+    let guess;
+    let wins = [];
+    let pcwins = [];
+    const rps = ["rock","paper","scissors"];
+    let pchoice = rps[Math.floor(Math.random()*rps.length)];
+
+    function player(){
+        guess = prompt("Choose Rock , paper or scissors as your weapon: ")
+        return guess;
+    }
+
+    function game(){
+        player()
+        if (pchoice ==="rock"){
+            console.log("Computer chose:",pchoice)
+            if (guess.toLowerCase()==="rock"){
+                console.log("Tie!!!")
+                console.log("You:", wins.length);
+                console.log("Computer:" , pcwins.length)
+            }else if (guess.toLowerCase()==="paper"){
+                wins.push(1)
+                console.log("You win , paper beats rock")
+                console.log("You:", wins.length);
+                console.log("Computer:" , pcwins.length)
+            }else if (guess.toLowerCase()==="scissors"){
+                pcwins.push(1)
+                console.log("You lost, rock beats scissors")
+                console.log("You:", wins.length);
+                console.log("Computer:" , pcwins.length)
+            }
+        }if (pchoice ==="paper"){
+            console.log("Computer chose:",pchoice)
+            if (guess.toLowerCase()==="paper"){
+                console.log("Tie!!!")
+                console.log("You:", wins.length);
+                console.log("Computer:" , pcwins.length)
+            }else if (guess.toLowerCase()==="rock"){
+                pcwins.push(1)
+                console.log("You lost, paper beats rock")
+                console.log("You:", wins.length);
+                console.log("Computer:" , pcwins.length)
+            }else if (guess.toLowerCase()==="scissors"){
+                wins.push(1)
+                console.log("You win , scissors beats paper")
+                console.log("You:", wins.length);
+                console.log("Computer:" , pcwins.length)
+            }
+        }if (pchoice ==="scissors"){
+            console.log("Computer chose:",pchoice)
+            if (guess.toLowerCase()==="scissors"){
+                console.log("Tie!!!")
+                console.log("You:", wins.length);
+                console.log("Computer:" , pcwins.length)
+            }else if (guess.toLowerCase()==="rock"){
+                wins.push(1)
+                console.log("You win , rock beats scissors")
+                console.log("You:", wins.length);
+                console.log("Computer:" , pcwins.length)
+            }else if (guess.toLowerCase()==="paper"){
+                pcwins.push(1)
+                console.log("You lost , scissors beats paper")
+                console.log("You:", wins.length);
+                console.log("Computer:" , pcwins.length)
+            }
+        }
+    }
+
+   
+
+    
+  </script>
+
+</body>
+
+
+
+
+</html>
