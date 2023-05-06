@@ -1,0 +1,51 @@
+body{
+    background-image: url(imgs/bg1.jpg);
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px;
+    gap: 25px;
+}
+
+.btn{
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.4s;
+    border:none;
+    background-color: black;
+    text-decoration: none;
+    color: rgb(242, 8, 250);
+    background-color: transparent;
+    font-family: cursive;
+}
+
+.score{
+    color: rgb(245, 232, 210);
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    gap: 30px;
+    font-family: cursive;
+    font-size: 30px;
+}
+.btn:hover{
+    transform: scale(1.5);
+}
+.whowon{
+    color: rgb(231, 231, 235);
+    display:flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-family: monospace;
+    font-size: 30px;
+}
+.pchoice{
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+    font-family: cursive;
+    font-size: 30px;
+}
