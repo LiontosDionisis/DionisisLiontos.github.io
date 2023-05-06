@@ -3,6 +3,8 @@ let playerSelection;
 let w=[];
 let p = [];
 let computerSelection = getComputerChoice()
+let wins = [];
+let losses = [];
 
 function getComputerChoice(){
     let computerSelection = rps[Math.floor(Math.random()*rps.length)];
@@ -13,24 +15,51 @@ function getComputerChoice(){
 function playRound(playerSelection, computerSelection){
 
     if (playerSelection=== computerSelection){
-        whowon.textContent = "It's a tie!!"
+        whowon.textContent = "TIE!"
     }else if(
         (playerSelection ==="rock" && computerSelection === "scissors")||
         (playerSelection ==="paper"&& computerSelection === "rock")||
         (playerSelection ==="scissors" && computerSelection ==="paper")){
-            whowon.textContent = `You win!! ${playerSelection} beats ${computerSelection}`
+            whowon.textContent = `WIN ${playerSelection} beats ${computerSelection}`
             w.push(1)
+            updateScore()
+            resetVar()
             you.textContent =`You: ${w.length}`
             pchoice.textContent=`Computer chose ${computerSelection}`
         }else{
-            whowon.textContent=`You lose!! ${computerSelection} beats ${playerSelection}`
+            whowon.textContent=`LOSS ${computerSelection} beats ${playerSelection}`
             p.push(1)
+            updateScore()
+            resetVar()
             pscore.textContent = `Computer: ${p.length}`
             pchoice.textContent = `Computer chose ${computerSelection}`
              
         }
     
 }
+
+function resetVar(){
+    if(w.length == 5 || p.length == 5){
+        p = [];
+        w = [];
+        you.textContent =`You: ${w.length}`
+        pscore.textContent = `Computer: ${p.length}`      
+}
+}
+
+function updateScore(){
+    if (w.length == 5){
+        wins.push(1)
+        yourscore.textContent = `WINS: ${wins.length}`
+    }if(p.length == 5){
+        losses.push(1)
+        compscore.textContent = `LOSSES: ${losses.length}`
+    }
+}
+
+
+
+
 
 let btnRock = document.getElementById('btn-rock')
 btnRock.onclick = () => playRound("rock", getComputerChoice());
@@ -50,4 +79,9 @@ pscore.textContent = `Computer: ${p.length}`
 
 let whowon= document.querySelector(".whowon")
 let pchoice = document.querySelector('.pchoice')
+let whowongame = document.querySelector('.whowongame')
+let yourscore = document.querySelector('.scorefinal')
+let compscore = document.querySelector('.scorefinalpc')
+yourscore.textContent = `WINS: ${wins.length}`
+compscore.textContent = `LOSSES: ${losses.length}`
 

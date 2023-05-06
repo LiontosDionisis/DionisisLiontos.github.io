@@ -23,7 +23,7 @@ body{
 }
 
 .score{
-    color: rgb(245, 232, 210);
+    color: rgb(252, 252, 252);
     display: flex;
     justify-content: center;
     margin-top: 100px;
@@ -48,4 +48,18 @@ body{
     margin-top: 100px;
     font-family: cursive;
     font-size: 30px;
+}
+.whowongame{
+    font-family: cursive;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+.scoretab{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-family: cursive;
+    font-size: 50px;
+    gap: 300px;
 }
