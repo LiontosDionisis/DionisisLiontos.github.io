@@ -20,19 +20,19 @@ function playRound(playerSelection, computerSelection){
         (playerSelection ==="rock" && computerSelection === "scissors")||
         (playerSelection ==="paper"&& computerSelection === "rock")||
         (playerSelection ==="scissors" && computerSelection ==="paper")){
-            whowon.textContent = `WIN ${playerSelection} beats ${computerSelection}`
+            whowon.textContent = `WIN! ${playerSelection} beats ${computerSelection}`
             w.push(1)
             updateScore()
             resetVar()
             you.textContent =`You: ${w.length}`
-            pchoice.textContent=`Computer chose ${computerSelection}`
+            pchoice.textContent=`Computer chose ${computerSelection.toUpperCase()}`
         }else{
-            whowon.textContent=`LOSS ${computerSelection} beats ${playerSelection}`
+            whowon.textContent=`LOSS! ${computerSelection} beats ${playerSelection}`
             p.push(1)
             updateScore()
             resetVar()
             pscore.textContent = `Computer: ${p.length}`
-            pchoice.textContent = `Computer chose ${computerSelection}`
+            pchoice.textContent = `Computer chose ${computerSelection.toUpperCase()}`
              
         }
     

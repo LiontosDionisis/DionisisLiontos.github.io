@@ -6,20 +6,21 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 300px;
-    gap: 25px;
+    margin-top: 150px;
+    gap: 70px;
 }
 
 .btn{
     font-size: 30px;
     cursor: pointer;
-    transition: 0.4s;
+    transition: 0.2s;
     border:none;
     background-color: black;
     text-decoration: none;
-    color: rgb(242, 8, 250);
+    color: yellow;
     background-color: transparent;
     font-family: cursive;
+    font-weight: bolder;
 }
 
 .score{
@@ -29,25 +30,26 @@ body{
     margin-top: 100px;
     gap: 30px;
     font-family: cursive;
-    font-size: 30px;
+    font-size: 50px;
 }
 .btn:hover{
     transform: scale(1.5);
 }
 .whowon{
-    color: rgb(231, 231, 235);
-    display:flex;
-    justify-content: center;
-    margin-top: 50px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 120px;
     font-family: monospace;
-    font-size: 30px;
+    font-size: 70px;
+    font-weight: bolder;
+
 }
 .pchoice{
     color: white;
     text-align: center;
     margin-top: 100px;
     font-family: cursive;
-    font-size: 30px;
+    font-size: 40px;
 }
 .whowongame{
     font-family: cursive;
@@ -58,7 +60,7 @@ body{
 .scoretab{
     display: flex;
     justify-content: space-around;
-    color: white;
+    color: yellow;
     font-family: cursive;
     font-size: 50px;
     gap: 300px;
